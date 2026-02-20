@@ -1,4 +1,3 @@
-# Base class
 class Khmerbank:
     def __init__(self, name, phone, password, secret, balance):
         self.name = name
@@ -57,7 +56,6 @@ class Khmerbank:
                 print("Not enough money!")
         else:
             print("Wrong secret number!")
-
 
 # SavingAccount inherits Khmerbank
 class SavingAccount(Khmerbank):
@@ -149,7 +147,6 @@ class BusinessAccount(Khmerbank):
             print("Wrong secret number!")
 
 
-# Create example accounts
 khmer_acc = Khmerbank("Raty", "012345678", 123456, 1122, 1000)
 saving_acc = SavingAccount("Vanra", "011223344", 654321, 2233, 500)
 student_acc = StudentBankAccount("Sophea", "099887766", 111222, 3344, 800)
@@ -157,7 +154,6 @@ premium_acc = PremiumSaving("Sareth", "088776655", 987654, 5566, 2000)
 business_acc = BusinessAccount("MegaCorp", "077665544", 555666, 7788, 10000)
 
 
-# Simple ATM Menu (example for Khmerbank and child accounts)
 accounts = {
     "1": khmer_acc,
     "2": saving_acc,
